@@ -32,7 +32,7 @@ $ npm run start:prod
 
 ## Running Swagger
 
-- you need to setup the .env environment variable NODE_ENV first
+- you need to setup the .env environment variable NODE_ENV=develpment first
 
 - run this swagger link http://localhost:3041/swagger-api/
 
