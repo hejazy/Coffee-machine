@@ -3,6 +3,6 @@
     "port": 3041
   },
   "db": {
-    "uri": "mongodb://localhost:27017/inspection-tool"
+    "uri": "mongodb://localhost:27017/coffee-tool"
   }
 }

@@ -12,7 +12,7 @@ A Coffee API with Unit/E2E test
 
 ```
 NODE_ENV=development
-DB_URI=mongodb://localhost:27017/inspection-tool
+DB_URI=mongodb://localhost:27017/coffee-tool
 PORT=3041
 ```
 
