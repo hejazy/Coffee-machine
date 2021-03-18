@@ -1,6 +1,6 @@
 ## Description
 
-A Coffee API with Unit/E2E unit test
+A Coffee API with Unit/E2E test
 
 ## Installation
 
