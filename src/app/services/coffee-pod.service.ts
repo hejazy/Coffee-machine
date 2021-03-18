@@ -13,15 +13,15 @@ import { CoffeePod } from '../models';
 @Injectable()
 export class CoffeePodsService {
   constructor(
-    @InjectModel('coffee-pod') private readonly coffePodModel: Model<CoffeePod>,
+    @InjectModel('coffee-pod') private readonly coffeePodModel: Model<CoffeePod>,
   ) {
   }
 
   async findById(id: string): Promise<CoffeePod> {
-    return await this.coffePodModel.findOne({ _id: id });
+    return await this.coffeePodModel.findOne({ _id: id });
   }
   async remove(id: string): Promise<{ message: string, deletedCount: number }> {
-    const response = await this.coffePodModel.deleteOne({ _id: id });
+    const response = await this.coffeePodModel.deleteOne({ _id: id });
     return {
       message: response.ok ? 'Data deleted successfully' : 'not valid',
       deletedCount: response.deletedCount,
@@ -33,15 +33,15 @@ export class CoffeePodsService {
     const pipeLine: any = [
       { $match: this.queryMaker(filters) },
     ];
-    return await this.coffePodModel.aggregate(pipeLine);
+    return await this.coffeePodModel.aggregate(pipeLine);
   }
 
   async create(coffeePod: CoffeePodCreateDTO): Promise<CoffeePod> {
-    return await this.coffePodModel.create(coffeePod);
+    return await this.coffeePodModel.create(coffeePod);
   }
 
   async update(id: string, coffeePod: CoffeePodUpdateDTO): Promise<CoffeePod> {
-    return await this.coffePodModel.findOneAndUpdate(
+    return await this.coffeePodModel.findOneAndUpdate(
       { _id: id },
       { $set: { ...coffeePod, updated_at: new Date() }}, { new: true },
     );

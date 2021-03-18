@@ -24,27 +24,27 @@ describe('Coffee Machines Controller', () => {
     controller = module.get<CoffeeMachineController>(CoffeeMachineController);
     service = module.get<CoffeeMachinesService>(CoffeeMachinesService);
   });
-  it('save new coffem achine', async () => {
-    const expectedResult = 'coffe machine';
+  it('save new coffee achine', async () => {
+    const expectedResult = 'coffee machine';
     jest.spyOn(service, 'create').mockResolvedValue(expectedResult);
-    expect(await controller.add('coffem achine')).toBe(expectedResult);
+    expect(await controller.add('coffee achine')).toBe(expectedResult);
   });
-  it('update coffem achine', async () => {
-    const expectedResult = 'coffe machine';
+  it('update coffee achine', async () => {
+    const expectedResult = 'coffee machine';
     jest.spyOn(service, 'update').mockResolvedValue(expectedResult);
-    expect(await controller.update('coffem achine')).toBe(expectedResult);
+    expect(await controller.update('coffee achine')).toBe(expectedResult);
   });
-  it('filter coffem achines', async () => {
-    const expectedResult = ['coffe machine', 'coffe machine'];
+  it('filter coffee achines', async () => {
+    const expectedResult = ['coffee machine', 'coffee machine'];
     jest.spyOn(service, 'filter').mockResolvedValue(expectedResult);
     expect(await controller.query('query')).toBe(expectedResult);
   });
-  it('find coffem achine By Id', async () => {
-    const expectedResult = 'coffe machine';
+  it('find coffee achine By Id', async () => {
+    const expectedResult = 'coffee machine';
     jest.spyOn(service, 'findById').mockResolvedValue(expectedResult);
     expect(await controller.findById('the id')).toBe(expectedResult);
   });
-  it('delete coffem achine By Id', async () => {
+  it('delete coffee achine By Id', async () => {
     const expectedResult = { message: 'deleted successfully', deletedCount: 1 };
     jest.spyOn(service, 'remove').mockResolvedValue(expectedResult);
     expect(await controller.removeById('the id')).toBe(expectedResult);

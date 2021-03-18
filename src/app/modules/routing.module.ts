@@ -11,7 +11,7 @@ const routes: Route[] = [
     module: CoffeeMachineModule,
   },
   {
-    path: '/coffe-pod',
+    path: '/coffee-pod',
     module: CoffeePodModule,
   }
 ];

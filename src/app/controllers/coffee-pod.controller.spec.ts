@@ -24,27 +24,27 @@ describe('Coffee Pods Controller', () => {
     controller = module.get<CoffeePodController>(CoffeePodController);
     service = module.get<CoffeePodsService>(CoffeePodsService);
   });
-  it('save new coffe pod', async () => {
+  it('save new coffee pod', async () => {
     const expectedResult = 'Coffee Pod';
     jest.spyOn(service, 'create').mockResolvedValue(expectedResult);
-    expect(await controller.add('coffe pod', 'user data')).toBe(expectedResult);
+    expect(await controller.add('coffee pod', 'user data')).toBe(expectedResult);
   });
-  it('update coffe pod', async () => {
+  it('update coffee pod', async () => {
     const expectedResult = 'Coffee Pod';
     jest.spyOn(service, 'update').mockResolvedValue(expectedResult);
-    expect(await controller.update('coffe pod')).toBe(expectedResult);
+    expect(await controller.update('coffee pod')).toBe(expectedResult);
   });
-  it('filter coffe pods', async () => {
+  it('filter coffee pods', async () => {
     const expectedResult = ['Coffee Pod', 'Coffee Pod'];
     jest.spyOn(service, 'filter').mockResolvedValue(expectedResult);
     expect(await controller.query('query')).toBe(expectedResult);
   });
-  it('find coffe pod By Id', async () => {
+  it('find coffee pod By Id', async () => {
     const expectedResult = 'Coffee Pod';
     jest.spyOn(service, 'findById').mockResolvedValue(expectedResult);
     expect(await controller.findById('the id')).toBe(expectedResult);
   });
-  it('delete coffe pod By Id', async () => {
+  it('delete coffee pod By Id', async () => {
     const expectedResult = { message: 'deleted successfully', deletedCount: 1 };
     jest.spyOn(service, 'remove').mockResolvedValue(expectedResult);
     expect(await controller.removeById('the id')).toBe(expectedResult);
